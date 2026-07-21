@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -10,10 +10,12 @@
   <meta property="og:description" content="How much does YouTube actually pay? Estimate earnings with real RPM data by niche and country, not a generic slider." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://thumbsnag.com/youtube-earnings-calculator" />
+  <meta property="og:image" content="https://thumbsnag.com/img/og-brand.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/styles.css?v=2" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 </head>
 <body>
@@ -77,6 +79,12 @@
           <p class="hint">Ad revenue only. Sponsorships, affiliates, and memberships usually add 2x to 5x on top for established channels.</p>
         </div>
       </div>
+
+      <div class="panel mt-2">
+        <h2>Same views, every niche <span class="badge">nobody else shows this</span></h2>
+        <p class="hint">What your exact views would earn in every niche. This is why "how much does YouTube pay" has no single answer.</p>
+        <div id="compare-list" class="mt-2"></div>
+      </div>
     </div>
   </section>
 
@@ -130,7 +138,13 @@
   <footer class="site-footer">
     <div class="wrap">
       <div>&copy; 2026 ThumbSnag. Free tools for YouTube creators.</div>
-      <div><a href="/">Home</a> &nbsp;&bull;&nbsp; <a href="/youtube-thumbnail-downloader">Thumbnail Downloader</a></div>
+      <div>
+        <a href="/youtube-thumbnail-downloader">Thumbnail Downloader</a> &nbsp;&bull;&nbsp;
+        <a href="/about">About</a> &nbsp;&bull;&nbsp;
+        <a href="/contact">Contact</a> &nbsp;&bull;&nbsp;
+        <a href="/privacy-policy">Privacy</a> &nbsp;&bull;&nbsp;
+        <a href="/terms">Terms</a>
+      </div>
     </div>
   </footer>
 
@@ -170,6 +184,6 @@
     ]
   }
   </script>
-  <script src="/js/earnings-calc.js"></script>
+  <script src="/js/earnings-calc.js?v=2"></script>
 </body>
 </html>

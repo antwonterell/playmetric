@@ -105,7 +105,13 @@ const RESOLUTIONS = [
   { file: "mqdefault", label: "Medium", width: 320, height: 180 },
   { file: "default", label: "Small", width: 120, height: 90 },
 ];
-const RES_FILES = new Set(RESOLUTIONS.map((r) => r.file));
+// YouTube also auto-captures three alternate frames per video
+const FRAMES = [
+  { file: "hq1", label: "Frame 1", width: 480, height: 360 },
+  { file: "hq2", label: "Frame 2", width: 480, height: 360 },
+  { file: "hq3", label: "Frame 3", width: 480, height: 360 },
+];
+const RES_FILES = new Set([...RESOLUTIONS, ...FRAMES].map((r) => r.file));
 
 function thumbUrl(id, file) {
   return `https://i.ytimg.com/vi/${id}/${file}.jpg`;
@@ -133,18 +139,20 @@ app.get("/api/thumbnails", async (req, res) => {
     return res.status(400).json({ error: "That does not look like a YouTube link or video ID." });
   }
   try {
-    const checks = await Promise.all(
-      RESOLUTIONS.map(async (r) => {
-        const head = await fetch(thumbUrl(id, r.file), {
-          method: "HEAD",
-          signal: AbortSignal.timeout(8000),
-        }).catch(() => null);
-        const len = head && head.ok ? Number(head.headers.get("content-length") || 0) : 0;
-        const available = !!(head && head.ok) && (r.file === "default" || len === 0 || len >= 2000);
-        return { ...r, url: thumbUrl(id, r.file), available };
-      })
-    );
-    res.json({ videoId: id, thumbnails: checks });
+    const check = async (r, lenient) => {
+      const head = await fetch(thumbUrl(id, r.file), {
+        method: "HEAD",
+        signal: AbortSignal.timeout(8000),
+      }).catch(() => null);
+      const len = head && head.ok ? Number(head.headers.get("content-length") || 0) : 0;
+      const available = !!(head && head.ok) && (lenient || len === 0 || len >= 2000);
+      return { ...r, url: thumbUrl(id, r.file), available };
+    };
+    const [thumbnails, frames] = await Promise.all([
+      Promise.all(RESOLUTIONS.map((r) => check(r, r.file === "default"))),
+      Promise.all(FRAMES.map((r) => check(r, true))),
+    ]);
+    res.json({ videoId: id, thumbnails, frames });
   } catch (err) {
     console.error("thumbnails error:", err.message);
     res.status(502).json({ error: "Could not reach YouTube's image servers. Try again." });

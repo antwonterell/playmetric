@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -10,10 +10,12 @@
   <meta property="og:description" content="Grab any YouTube thumbnail in every resolution. Batch download, copy URLs, and preview thumbnails in a mock YouTube layout." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://thumbsnag.com/youtube-thumbnail-downloader" />
+  <meta property="og:image" content="https://thumbsnag.com/img/og-brand.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/styles.css?v=2" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 </head>
 <body>
@@ -40,6 +42,7 @@
         <div class="tabs">
           <button class="tab-btn active" data-tab="single">Single video</button>
           <button class="tab-btn" data-tab="batch">Batch (up to 20)</button>
+          <button class="tab-btn" data-tab="lineup">Lineup vs competitors</button>
         </div>
 
         <div class="tab-pane active" id="pane-single">
@@ -64,13 +67,39 @@
           <p class="hint">If a video has no HD thumbnail, we automatically include the best size available instead.</p>
           <div class="error-msg" id="batch-error"></div>
         </div>
+
+        <div class="tab-pane" id="pane-lineup">
+          <textarea id="lineup-input" rows="6" placeholder="Your video link first, then up to 5 competitor links, one per line"></textarea>
+          <div class="input-row mt-1" style="align-items:center">
+            <button class="btn" id="lineup-btn">Build the lineup</button>
+            <button class="btn ghost hidden" id="shuffle-btn">Shuffle order</button>
+          </div>
+          <p class="hint">See your thumbnail sitting in a real YouTube results feed next to the competition. If yours does not jump out here, it will not jump out on YouTube either.</p>
+          <div class="error-msg" id="lineup-error"></div>
+        </div>
+      </div>
+
+      <div class="yt-mock hidden" id="lineup-feed-wrap">
+        <h3>Search results simulation, spot yours instantly?</h3>
+        <div id="lineup-feed"></div>
       </div>
 
       <div id="results" class="hidden">
         <div class="thumb-grid" id="thumb-grid"></div>
 
+        <div class="panel mt-2 hidden" id="frames-wrap">
+          <h2>Hidden alternate frames <span class="badge">competitors miss these</span></h2>
+          <p class="hint">YouTube automatically captures three extra frames from every video. Sometimes one of them is a better cover than the real thumbnail.</p>
+          <div class="thumb-grid" id="frames-grid"></div>
+        </div>
+
         <div class="yt-mock" id="yt-mock">
           <h3>Preview: how this thumbnail looks on YouTube</h3>
+          <div class="tabs" style="margin-bottom:16px">
+            <button class="tab-btn mock-toggle active" id="toggle-dark">Dark mode</button>
+            <button class="tab-btn mock-toggle" id="toggle-light">Light mode</button>
+            <button class="tab-btn" id="toggle-squint">Squint test</button>
+          </div>
           <div class="yt-result">
             <div class="yt-thumb"><img id="mock-large" alt="Thumbnail preview at search result size" /></div>
             <div class="yt-info">
@@ -112,6 +141,9 @@
         <li><strong>Batch download:</strong> paste up to 20 links and get one ZIP with every thumbnail.</li>
         <li><strong>Real YouTube preview:</strong> see the thumbnail at actual search result and sidebar sizes before you commit to a design.</li>
         <li><strong>Thumbnail check:</strong> instant feedback on brightness, contrast, and color palette, the things that drive clicks.</li>
+        <li><strong>Lineup mode:</strong> drop your thumbnail into a simulated results feed next to your competitors and see if it wins the click.</li>
+        <li><strong>Hidden alternate frames:</strong> YouTube captures three extra frames from every video. We surface them; almost nobody else does.</li>
+        <li><strong>Squint test and light mode:</strong> preview your thumbnail blurred and on YouTube's white theme, the two ways viewers actually encounter it.</li>
         <li><strong>No junk:</strong> no watermarks, no sign up, no redirect chains, and it works great on your phone.</li>
       </ul>
 
@@ -142,7 +174,13 @@
   <footer class="site-footer">
     <div class="wrap">
       <div>&copy; 2026 ThumbSnag. Free tools for YouTube creators.</div>
-      <div><a href="/">Home</a> &nbsp;&bull;&nbsp; <a href="/youtube-earnings-calculator">Earnings Calculator</a></div>
+      <div>
+        <a href="/youtube-earnings-calculator">Earnings Calculator</a> &nbsp;&bull;&nbsp;
+        <a href="/about">About</a> &nbsp;&bull;&nbsp;
+        <a href="/contact">Contact</a> &nbsp;&bull;&nbsp;
+        <a href="/privacy-policy">Privacy</a> &nbsp;&bull;&nbsp;
+        <a href="/terms">Terms</a>
+      </div>
     </div>
   </footer>
 
@@ -187,6 +225,6 @@
     ]
   }
   </script>
-  <script src="/js/thumbnail-tool.js"></script>
+  <script src="/js/thumbnail-tool.js?v=2"></script>
 </body>
 </html>

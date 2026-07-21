@@ -79,6 +79,34 @@
         : "-";
 
     lastResult = { views, niche, geo, mid, low, high, blendedRpm };
+    renderComparison(views, geo, shortsPct, niche.id);
+  }
+
+  // "Same views, every niche" comparison bars
+  function renderComparison(views, geo, shortsPct, selectedId) {
+    const list = document.getElementById("compare-list");
+    const longViews = views * (1 - shortsPct);
+    const shortViews = views * shortsPct;
+    const rows = NICHES.map((n) => {
+      const midRpm = ((n.low + n.high) / 2) * geo.mult;
+      const mid = (longViews / 1000) * midRpm + (shortViews / 1000) * SHORTS_RPM;
+      return { n, mid };
+    }).sort((a, b) => b.mid - a.mid);
+    const max = rows[0] ? rows[0].mid : 0;
+
+    list.innerHTML = "";
+    rows.forEach(({ n, mid }) => {
+      const row = document.createElement("div");
+      row.className = "compare-row" + (n.id === selectedId ? " selected" : "");
+      const pct = max > 0 ? Math.max(3, Math.round((mid / max) * 100)) : 3;
+      row.innerHTML =
+        '<div class="cr-label"></div>' +
+        '<div class="cr-bar-holder"><div class="cr-bar" style="width:' + pct + '%"></div></div>' +
+        '<div class="cr-value">' + fmt(mid) + "</div>";
+      row.querySelector(".cr-label").textContent =
+        n.label + (n.id === selectedId ? " (you)" : "");
+      list.appendChild(row);
+    });
   }
 
   document.getElementById("calc-btn").addEventListener("click", calc);
