@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Thumbnail Downloader - Free HD Download (All Sizes) | ThumbSnag</title>
+  <meta name="description" content="Download any YouTube thumbnail in full HD for free. Paste a link, grab every resolution instantly, batch download up to 20 videos, and preview how thumbnails look in real YouTube search results." />
+  <link rel="canonical" href="https://thumbsnag.com/youtube-thumbnail-downloader" />
+  <meta property="og:title" content="YouTube Thumbnail Downloader - Free HD Download | ThumbSnag" />
+  <meta property="og:description" content="Grab any YouTube thumbnail in every resolution. Batch download, copy URLs, and preview thumbnails in a mock YouTube layout." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thumbsnag.com/youtube-thumbnail-downloader" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="logo">Thumb<span class="snag">Snag</span></a>
+      <nav class="main-nav">
+        <a href="/youtube-thumbnail-downloader" class="active">Thumbnail Downloader</a>
+        <a href="/youtube-earnings-calculator">Earnings Calculator</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>YouTube Thumbnail <span class="accent">Downloader</span></h1>
+      <p class="sub">Paste any YouTube link and snag the thumbnail in every resolution, up to full 1280x720 HD. Free, instant, no watermarks, no sign up.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="panel">
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="single">Single video</button>
+          <button class="tab-btn" data-tab="batch">Batch (up to 20)</button>
+        </div>
+
+        <div class="tab-pane active" id="pane-single">
+          <div class="input-row">
+            <input type="url" id="url-input" placeholder="Paste a YouTube link, e.g. https://youtube.com/watch?v=..." autocomplete="off" />
+            <button class="btn" id="grab-btn">Snag it</button>
+          </div>
+          <p class="hint">Works with watch links, youtu.be short links, Shorts, embeds, and plain video IDs. Tip: we auto-grab as soon as you paste.</p>
+          <div class="error-msg" id="single-error"></div>
+        </div>
+
+        <div class="tab-pane" id="pane-batch">
+          <textarea id="batch-input" rows="6" placeholder="Paste up to 20 YouTube links, one per line"></textarea>
+          <div class="input-row mt-1" style="align-items:center">
+            <select id="batch-quality" style="max-width:220px">
+              <option value="maxresdefault">Max HD (1280x720)</option>
+              <option value="sddefault">SD (640x480)</option>
+              <option value="hqdefault">High (480x360)</option>
+            </select>
+            <button class="btn" id="batch-btn">Download all as ZIP</button>
+          </div>
+          <p class="hint">If a video has no HD thumbnail, we automatically include the best size available instead.</p>
+          <div class="error-msg" id="batch-error"></div>
+        </div>
+      </div>
+
+      <div id="results" class="hidden">
+        <div class="thumb-grid" id="thumb-grid"></div>
+
+        <div class="yt-mock" id="yt-mock">
+          <h3>Preview: how this thumbnail looks on YouTube</h3>
+          <div class="yt-result">
+            <div class="yt-thumb"><img id="mock-large" alt="Thumbnail preview at search result size" /></div>
+            <div class="yt-info">
+              <div class="yt-title">Your video title would appear here in YouTube search</div>
+              <div class="yt-meta">124K views &bull; 2 days ago</div>
+              <div class="yt-meta mt-1">This is the size viewers see in search results on desktop.</div>
+            </div>
+          </div>
+          <div class="yt-sidebar-row">
+            <div class="yt-thumb-sm"><img id="mock-small" alt="Thumbnail preview at sidebar size" /></div>
+            <div>
+              <div class="t">Sidebar / suggested size</div>
+              <div class="m">If text is unreadable here, most viewers never see it.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel mt-2" id="analyzer">
+          <h2>Thumbnail check <span class="badge">free analyzer</span></h2>
+          <p class="hint">A quick automated read on whether this thumbnail is built to get clicks.</p>
+          <div class="analyzer-grid" id="analyzer-grid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap content-block">
+      <h2>How to download a YouTube thumbnail</h2>
+      <ol>
+        <li>Copy the link of any YouTube video, Short, or embed.</li>
+        <li>Paste it in the box above. ThumbSnag grabs every available size automatically.</li>
+        <li>Click Download on the resolution you want, or copy the direct image URL.</li>
+      </ol>
+      <p>Every YouTube video stores its thumbnail in up to five sizes: 1280x720 (Max HD), 640x480 (SD), 480x360 (High), 320x180 (Medium), and 120x90 (Small). ThumbSnag checks which sizes actually exist for your video and only shows you the real ones.</p>
+
+      <h2>What makes ThumbSnag different</h2>
+      <ul>
+        <li><strong>Batch download:</strong> paste up to 20 links and get one ZIP with every thumbnail.</li>
+        <li><strong>Real YouTube preview:</strong> see the thumbnail at actual search result and sidebar sizes before you commit to a design.</li>
+        <li><strong>Thumbnail check:</strong> instant feedback on brightness, contrast, and color palette, the things that drive clicks.</li>
+        <li><strong>No junk:</strong> no watermarks, no sign up, no redirect chains, and it works great on your phone.</li>
+      </ul>
+
+      <h2>Frequently asked questions</h2>
+      <details class="faq-item">
+        <summary>Is it legal to download YouTube thumbnails?</summary>
+        <div class="a">Downloading a thumbnail for reference, research, or fair use commentary is generally fine. The image itself belongs to the channel that made it, so do not reupload someone else's thumbnail as your own. Common legit uses: studying competitors, archiving your own videos, and building mood boards.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Why is there no HD (1280x720) option for some videos?</summary>
+        <div class="a">YouTube only generates the maxresdefault HD file when the uploaded video is HD and the thumbnail was rendered at full size. Older or low resolution uploads may top out at 640x480 or 480x360. ThumbSnag always shows you the best sizes that actually exist.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Can I download thumbnails from YouTube Shorts?</summary>
+        <div class="a">Yes. Paste the Shorts link and it works exactly the same way as a normal video.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Does this work on mobile?</summary>
+        <div class="a">Yes. The whole site is built mobile first. Paste a link, tap Download, and the image saves straight to your phone.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Do you store the thumbnails or my links?</summary>
+        <div class="a">No. Images stream straight from YouTube's servers to you. Nothing is saved on our end.</div>
+      </details>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>&copy; 2026 ThumbSnag. Free tools for YouTube creators.</div>
+      <div><a href="/">Home</a> &nbsp;&bull;&nbsp; <a href="/youtube-earnings-calculator">Earnings Calculator</a></div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "ThumbSnag YouTube Thumbnail Downloader",
+        "url": "https://thumbsnag.com/youtube-thumbnail-downloader",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Download YouTube thumbnails in every resolution including 1280x720 HD, with batch ZIP download and a real YouTube layout preview."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is it legal to download YouTube thumbnails?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Downloading a thumbnail for reference, research, or fair use commentary is generally fine. The image belongs to the channel that made it, so do not reupload someone else's thumbnail as your own." }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is there no HD 1280x720 option for some videos?",
+            "acceptedAnswer": { "@type": "Answer", "text": "YouTube only generates the HD maxresdefault file when the uploaded video is HD. Older or low resolution uploads may top out at 640x480 or 480x360." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I download thumbnails from YouTube Shorts?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Paste the Shorts link and it works exactly the same as a normal video link." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you store the thumbnails or my links?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Images stream straight from YouTube's servers to you and nothing is saved." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <script src="/js/thumbnail-tool.js"></script>
+</body>
+</html>

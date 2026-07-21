@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "thumbsnag",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["server.js"],
+      "cwd": "C:\\Users\\Antwo\\Documents\\antwonterell\\thumbsnag",
+      "port": 3000
+    }
+  ]
+}

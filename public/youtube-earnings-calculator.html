@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Earnings Calculator 2026 - Real RPM by Niche | ThumbSnag</title>
+  <meta name="description" content="Estimate how much a YouTube channel earns using real 2026 RPM data by niche and audience country. Finance channels earn 10x more than gaming per view. See low, typical, and high estimates instantly." />
+  <link rel="canonical" href="https://thumbsnag.com/youtube-earnings-calculator" />
+  <meta property="og:title" content="YouTube Earnings Calculator 2026 - Real RPM by Niche | ThumbSnag" />
+  <meta property="og:description" content="How much does YouTube actually pay? Estimate earnings with real RPM data by niche and country, not a generic slider." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thumbsnag.com/youtube-earnings-calculator" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="logo">Thumb<span class="snag">Snag</span></a>
+      <nav class="main-nav">
+        <a href="/youtube-thumbnail-downloader">Thumbnail Downloader</a>
+        <a href="/youtube-earnings-calculator" class="active">Earnings Calculator</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>YouTube <span class="accent-mint">Earnings</span> Calculator</h1>
+      <p class="sub">Most calculators use one generic CPM slider. This one uses real 2026 RPM data by niche and audience country, because a finance channel earns roughly 10x more per view than a gaming channel.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="calc-layout">
+        <div class="panel">
+          <div class="field">
+            <label for="views">Monthly views</label>
+            <input type="number" id="views" value="100000" min="0" step="1000" />
+          </div>
+          <div class="field">
+            <label for="niche">Channel niche <span class="sub-label">(biggest factor in pay)</span></label>
+            <select id="niche"></select>
+          </div>
+          <div class="field">
+            <label for="geo">Where your audience mostly is</label>
+            <select id="geo"></select>
+          </div>
+          <div class="field">
+            <label for="shorts-pct">How much of your views are Shorts <span class="sub-label">(Shorts pay far less per view)</span></label>
+            <select id="shorts-pct">
+              <option value="0">None, all long form</option>
+              <option value="25">About a quarter</option>
+              <option value="50">About half</option>
+              <option value="75">Mostly Shorts</option>
+              <option value="100">All Shorts</option>
+            </select>
+          </div>
+          <button class="btn mint" id="calc-btn" style="width:100%">Calculate earnings</button>
+        </div>
+
+        <div class="panel">
+          <div class="field">
+            <label>Estimated monthly ad revenue</label>
+            <div class="result-big" id="monthly-mid">$0</div>
+            <div class="result-range" id="monthly-range">low $0 to high $0</div>
+          </div>
+          <div class="result-row"><span class="k">Per year</span><span class="v" id="yearly">$0</span></div>
+          <div class="result-row"><span class="k">Per 1,000 views (RPM)</span><span class="v" id="rpm">$0</span></div>
+          <div class="result-row"><span class="k">Per view</span><span class="v" id="per-view">$0</span></div>
+          <div class="result-row"><span class="k">Views needed for $1,000/mo</span><span class="v" id="views-1k">-</span></div>
+          <button class="btn ghost mt-2" id="share-btn" style="width:100%">Download shareable result card</button>
+          <p class="hint">Ad revenue only. Sponsorships, affiliates, and memberships usually add 2x to 5x on top for established channels.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap content-block">
+      <h2>How this calculator works</h2>
+      <p>YouTube pays creators through RPM: revenue per 1,000 monetized views, after YouTube takes its 45% share. In 2026, most monetized channels land between $0.50 and $6 RPM overall, but the spread by niche is enormous. Finance, investing, and business content regularly hits $10 to $30 per 1,000 US views because insurance, banking, and investment advertisers pay the most for those viewers. Entertainment, gaming, and music sit at the bottom because advertisers bid less.</p>
+      <p>Audience geography matters almost as much. A view from the US, UK, Canada, or Australia can be worth 5 to 10 times a view from lower income ad markets. That is why this calculator asks where your audience is instead of pretending every view pays the same.</p>
+
+      <h2>Typical 2026 RPM by niche (US audience)</h2>
+      <ul>
+        <li>Finance and investing: $10 to $30</li>
+        <li>Real estate: $8 to $20</li>
+        <li>Business and entrepreneurship: $8 to $18</li>
+        <li>Digital marketing: $8 to $16</li>
+        <li>Tech and software: $5 to $12</li>
+        <li>Education and how-to: $4 to $9</li>
+        <li>Health and fitness: $3 to $7</li>
+        <li>Travel: $3 to $6</li>
+        <li>Beauty and fashion: $2.5 to $5</li>
+        <li>Food and cooking: $2 to $4.5</li>
+        <li>Gaming: $1.5 to $4</li>
+        <li>Entertainment and vlogs: $1.5 to $3.5</li>
+        <li>Music: $0.75 to $2</li>
+      </ul>
+
+      <h2>Frequently asked questions</h2>
+      <details class="faq-item">
+        <summary>How much does YouTube pay per 1,000 views in 2026?</summary>
+        <div class="a">For most monetized channels, between $0.50 and $6 per 1,000 views after YouTube's cut. High value niches like finance and investing can reach $10 to $30 per 1,000 views with a US audience, while music and entertainment can fall under $2.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How many views do I need to make $1,000 a month?</summary>
+        <div class="a">It depends entirely on your niche. A finance channel at $18 RPM needs about 56,000 monthly views. A gaming channel at $2.75 RPM needs about 364,000. Use the calculator above with your own niche to get your number.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Do YouTube Shorts pay less than regular videos?</summary>
+        <div class="a">Yes, dramatically. Shorts RPM is typically $0.05 to $0.15 per 1,000 views, roughly 20 to 50 times lower than long form in the same niche. Shorts are great for growth, but long form is where the ad money is.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Is this estimate exact?</summary>
+        <div class="a">No calculator can be exact because YouTube pays based on your specific advertisers, seasonality, and watch time. This tool gives you a realistic range built from published 2026 RPM data by niche and geography, which is much closer than a one-size-fits-all slider.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Does YouTube pay monthly?</summary>
+        <div class="a">Yes. Once you are in the YouTube Partner Program and cross the $100 threshold, AdSense pays out monthly, usually between the 21st and 26th.</div>
+      </details>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>&copy; 2026 ThumbSnag. Free tools for YouTube creators.</div>
+      <div><a href="/">Home</a> &nbsp;&bull;&nbsp; <a href="/youtube-thumbnail-downloader">Thumbnail Downloader</a></div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "ThumbSnag YouTube Earnings Calculator",
+        "url": "https://thumbsnag.com/youtube-earnings-calculator",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Estimate YouTube channel earnings using 2026 RPM data by niche and audience country, with low, typical, and high ranges."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does YouTube pay per 1,000 views in 2026?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Most monetized channels earn between $0.50 and $6 per 1,000 views after YouTube's cut. Finance and investing channels can reach $10 to $30 per 1,000 US views." }
+          },
+          {
+            "@type": "Question",
+            "name": "How many views do I need to make $1,000 a month on YouTube?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A finance channel at $18 RPM needs about 56,000 monthly views. A gaming channel at $2.75 RPM needs about 364,000 monthly views." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do YouTube Shorts pay less than regular videos?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Shorts RPM is typically $0.05 to $0.15 per 1,000 views, roughly 20 to 50 times lower than long form video in the same niche." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <script src="/js/earnings-calc.js"></script>
+</body>
+</html>

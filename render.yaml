@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: thumbsnag
+    runtime: node
+    plan: free # lightweight app, upgrade to starter if traffic grows
+    branch: main
+    autoDeploy: true
+    buildCommand: npm ci
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
