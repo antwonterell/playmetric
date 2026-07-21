@@ -1,4 +1,4 @@
-// ThumbSnag - thumbnail downloader frontend
+// Playmetric - thumbnail downloader frontend
 (function () {
   "use strict";
 
@@ -336,7 +336,7 @@
       const blob = await res.blob();
       const a = document.createElement("a");
       a.href = URL.createObjectURL(blob);
-      a.download = "thumbsnag-thumbnails.zip";
+      a.download = "playmetric-thumbnails.zip";
       a.click();
       URL.revokeObjectURL(a.href);
     } catch (err) {

@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: thumbsnag
+    name: playmetric
     runtime: node
     plan: free # lightweight app, upgrade to starter if traffic grows
     branch: main

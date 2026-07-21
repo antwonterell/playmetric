@@ -1,7 +1,7 @@
 {
-  "name": "thumbsnag",
+  "name": "playmetric",
   "version": "1.0.0",
-  "description": "ThumbSnag - free YouTube creator tools: thumbnail downloader and earnings calculator",
+  "description": "Playmetric - free YouTube creator tools: thumbnail downloader and earnings calculator",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -15,7 +15,7 @@
     "calculator",
     "creator-tools"
   ],
-  "author": "ThumbSnag",
+  "author": "Playmetric",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",

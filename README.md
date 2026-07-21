@@ -1,4 +1,4 @@
-# ThumbSnag
+# Playmetric
 
 Free YouTube creator tools. Two tools, one domain, built for SEO:
 
@@ -23,7 +23,7 @@ npm start
 
 ## Before launch checklist
 
-- [ ] Buy domain and replace `thumbsnag.com` in canonical/OG/sitemap/robots URLs if different
+- [ ] Buy domain and replace `playmetric.org` in canonical/OG/sitemap/robots URLs if different
 - [ ] Add Google Analytics or Plausible snippet to all three pages (update CSP in server.js to allow it)
 - [ ] Google Search Console: verify domain, submit sitemap.xml
 - [ ] AdSense application once there is some traffic (site must be live a few weeks first)

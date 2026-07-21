@@ -1,4 +1,4 @@
-// server.js - ThumbSnag
+// server.js - Playmetric
 // Free YouTube creator tools: thumbnail downloader + earnings calculator
 // Lean by design: no file storage, no heavy processing, images stream through.
 
@@ -192,7 +192,7 @@ app.post("/api/batch", async (req, res) => {
   }
 
   res.setHeader("Content-Type", "application/zip");
-  res.setHeader("Content-Disposition", 'attachment; filename="thumbsnag-thumbnails.zip"');
+  res.setHeader("Content-Disposition", 'attachment; filename="playmetric-thumbnails.zip"');
 
   const archive = archiver("zip", { zlib: { level: 6 } });
   archive.on("error", (err) => {
@@ -232,5 +232,5 @@ app.use(
 app.use((req, res) => res.status(404).sendFile(path.join(__dirname, "public", "404.html")));
 
 app.listen(PORT, () => {
-  console.log(`ThumbSnag running on port ${PORT}`);
+  console.log(`Playmetric running on port ${PORT}`);
 });

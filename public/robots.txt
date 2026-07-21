@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://thumbsnag.com/sitemap.xml
+Sitemap: https://playmetric.org/sitemap.xml

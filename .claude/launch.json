@@ -2,10 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "thumbsnag",
+      "name": "playmetric",
       "runtimeExecutable": "node",
       "runtimeArgs": ["server.js"],
-      "cwd": "C:\\Users\\Antwo\\Documents\\antwonterell\\thumbsnag",
+      "cwd": "C:\\Users\\Antwo\\Documents\\antwonterell\\playmetric",
       "port": 3000
     }
   ]

@@ -1,4 +1,4 @@
-// ThumbSnag - YouTube earnings calculator
+// Playmetric - YouTube earnings calculator
 // RPM ranges are 2026 published figures for a US audience; geo multipliers scale them.
 (function () {
   "use strict";
@@ -134,7 +134,7 @@
 
     ctx.fillStyle = "#eef1f7";
     ctx.font = "800 42px Inter, sans-serif";
-    ctx.fillText("ThumbSnag", 70, 100);
+    ctx.fillText("Playmetric", 70, 100);
     ctx.fillStyle = "#9aa3b5";
     ctx.font = "600 26px Inter, sans-serif";
     ctx.fillText("YouTube Earnings Estimate", 70, 145);
@@ -164,10 +164,10 @@
 
     ctx.fillStyle = "#ff5a45";
     ctx.font = "700 28px Inter, sans-serif";
-    ctx.fillText("thumbsnag.com/youtube-earnings-calculator", 70, 560);
+    ctx.fillText("playmetric.org/youtube-earnings-calculator", 70, 560);
 
     const a = document.createElement("a");
-    a.download = "thumbsnag-earnings-estimate.png";
+    a.download = "playmetric-earnings-estimate.png";
     a.href = c.toDataURL("image/png");
     a.click();
   });
