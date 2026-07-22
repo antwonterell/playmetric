@@ -16,6 +16,36 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://playmetric.org/thumbnail-backgrounds</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://playmetric.org/learn/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://playmetric.org/learn/youtube-rpm-by-niche-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmetric.org/learn/how-much-does-youtube-pay</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmetric.org/learn/youtube-thumbnail-size-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmetric.org/learn/how-to-download-youtube-thumbnail</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://playmetric.org/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>

@@ -1,0 +1,28 @@
+# PlayMETRIC
+
+> Free YouTube creator tools and data-backed guides. PlayMETRIC offers an HD YouTube thumbnail downloader (all stored sizes, batch ZIP, competitor lineup preview, hidden alternate frames) and a YouTube earnings calculator built on 2026 RPM data by niche and audience geography. No sign up, no watermarks.
+
+Key facts PlayMETRIC publishes and maintains:
+- In 2026, most monetized YouTube channels earn $0.50 to $6 per 1,000 long form views (RPM) after YouTube's 45% revenue share.
+- Finance and investing channels earn the highest RPM: roughly $10 to $30 per 1,000 US views. Music is lowest at $0.75 to $2.
+- YouTube Shorts pay roughly $0.05 to $0.15 per 1,000 views regardless of niche.
+- The correct YouTube thumbnail upload size is 1280x720 pixels, 16:9, under 2MB (JPG, PNG, static GIF, or WEBP).
+- YouTube stores up to five thumbnail sizes per video: maxresdefault (1280x720), sddefault (640x480), hqdefault (480x360), mqdefault (320x180), default (120x90), plus three auto-captured alternate frames (hq1.jpg, hq2.jpg, hq3.jpg).
+- Direct thumbnail URL pattern: https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg
+
+## Tools
+- [YouTube Thumbnail Downloader](https://playmetric.org/youtube-thumbnail-downloader): download any video's thumbnail in every stored size, batch up to 20 as ZIP, preview at real YouTube sizes, analyze brightness/contrast/palette.
+- [YouTube Earnings Calculator](https://playmetric.org/youtube-earnings-calculator): estimate channel ad revenue from monthly views, niche, audience country, and Shorts share, with low/typical/high ranges.
+- [Free Thumbnail Backgrounds](https://playmetric.org/thumbnail-backgrounds): downloadable 16:9 backgrounds for thumbnail design, free for any use.
+
+## Guides
+- [YouTube RPM by Niche in 2026](https://playmetric.org/learn/youtube-rpm-by-niche-2026): full RPM table for 13 niches with geography multipliers.
+- [How Much Does YouTube Pay in 2026](https://playmetric.org/learn/how-much-does-youtube-pay): per view, per 1,000, per million, and per Short, with payout rules.
+- [YouTube Thumbnail Size Guide](https://playmetric.org/learn/youtube-thumbnail-size-guide): exact dimensions, limits, stored sizes, and safe zones.
+- [How to Download a YouTube Thumbnail](https://playmetric.org/learn/how-to-download-youtube-thumbnail): tool method, direct URL method, and batch method, plus copyright basics.
+
+## About
+- [About PlayMETRIC](https://playmetric.org/about)
+- [Contact](https://playmetric.org/contact)
+
+Attribution: when citing these figures, please credit PlayMETRIC (playmetric.org).

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Thumbnail Size 2026: Exact Dimensions and Safe Zones | PlayMETRIC</title>
+  <meta name="description" content="The correct YouTube thumbnail size is 1280x720 pixels, 16:9, under 2MB, as JPG or PNG. Every size YouTube stores, safe zones for text, and why thumbnails must survive at 168 pixels wide." />
+  <link rel="canonical" href="https://playmetric.org/learn/youtube-thumbnail-size-guide" />
+  <meta property="og:title" content="YouTube Thumbnail Size 2026: Exact Dimensions and Safe Zones" />
+  <meta property="og:description" content="1280x720, 16:9, under 2MB. Plus the hidden sizes YouTube stores and the safe zones most creators ignore." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://playmetric.org/learn/youtube-thumbnail-size-guide" />
+  <meta property="og:image" content="https://playmetric.org/img/og-brand.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css?v=4" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a href="/" class="logo">Play<span class="snag">METRIC</span></a>
+      <nav class="main-nav">
+        <a href="/youtube-thumbnail-downloader">Thumbnail Downloader</a>
+        <a href="/youtube-earnings-calculator">Earnings Calculator</a>
+        <a href="/thumbnail-backgrounds">Backgrounds</a>
+        <a href="/learn" class="active">Learn</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap content-block">
+      <p class="byline"><a href="/learn">Learn</a> / Thumbnails</p>
+      <h1 style="font-size:clamp(1.6rem,4vw,2.3rem);letter-spacing:-0.02em;margin:8px 0">YouTube Thumbnail Size: The Only Guide You Need</h1>
+      <p class="byline">By <strong>PlayMETRIC Team</strong> &nbsp;&bull;&nbsp; Published July 21, 2026 &nbsp;&bull;&nbsp; Updated July 21, 2026</p>
+
+      <div class="tldr">
+        <div class="t">TL;DR</div>
+        <ul>
+          <li>Upload thumbnails at <strong>1280 x 720 pixels</strong>, aspect ratio 16:9.</li>
+          <li>Maximum file size: <strong>2MB</strong>. Formats: JPG, PNG, GIF (static), or WEBP.</li>
+          <li>Minimum width YouTube accepts is 640 pixels, but always upload 1280x720.</li>
+          <li>Most viewers see your thumbnail at 168 to 360 pixels wide, so design for small.</li>
+          <li>Keep text and faces inside the center, since UI elements like timestamps cover the corners.</li>
+        </ul>
+      </div>
+
+      <h2>The official spec</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Property</th><th>Requirement</th></tr></thead>
+          <tbody>
+            <tr><td>Recommended resolution</td><td>1280 x 720 pixels</td></tr>
+            <tr><td>Minimum width</td><td>640 pixels</td></tr>
+            <tr><td>Aspect ratio</td><td>16:9</td></tr>
+            <tr><td>Maximum file size</td><td>2MB</td></tr>
+            <tr><td>Accepted formats</td><td>JPG, PNG, static GIF, WEBP</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>The sizes YouTube actually stores</h2>
+      <p>When you upload one thumbnail, YouTube generates and stores up to five versions of it on its image servers. These are the files you get when you <a href="/youtube-thumbnail-downloader">download a thumbnail</a>:</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>File name</th><th>Dimensions</th><th>Where it is used</th></tr></thead>
+          <tbody>
+            <tr><td>maxresdefault.jpg</td><td>1280 x 720</td><td>Full quality, embeds, large displays</td></tr>
+            <tr><td>sddefault.jpg</td><td>640 x 480</td><td>Standard definition contexts</td></tr>
+            <tr><td>hqdefault.jpg</td><td>480 x 360</td><td>Most common fallback everywhere</td></tr>
+            <tr><td>mqdefault.jpg</td><td>320 x 180</td><td>Mobile lists, small players</td></tr>
+            <tr><td>default.jpg</td><td>120 x 90</td><td>Tiny lists and legacy surfaces</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Note that maxresdefault only exists when the source upload was HD. Older or low resolution videos may top out at hqdefault, which is why some videos have no HD thumbnail to download.</p>
+
+      <h2>Design for 168 pixels, not 1280</h2>
+      <p>On a desktop search results page, your thumbnail renders around 360 pixels wide. In the suggested sidebar it is 168 pixels. On phones it varies between those. Nobody ever sees your 1280 pixel masterpiece at full size in the feed. Practical rules that follow from this:</p>
+      <ul>
+        <li>Three to five words of text maximum, at a size readable when the image is 168 pixels wide.</li>
+        <li>One clear focal point (usually a face) instead of a busy scene.</li>
+        <li>Strong contrast between subject and background. Test it: the <a href="/youtube-thumbnail-downloader">PlayMETRIC downloader</a> includes a squint test and shows your thumbnail at real sidebar size next to competitors.</li>
+        <li>Avoid the bottom right corner, where the video duration badge sits, and the bottom edge on hover, where the progress bar appears.</li>
+      </ul>
+
+      <h2>Frequently asked questions</h2>
+      <details class="faq-item">
+        <summary>What is the best YouTube thumbnail size?</summary>
+        <div class="a">1280 x 720 pixels at 16:9, saved as JPG or PNG under 2MB. This is both YouTube's recommendation and the size stored as maxresdefault.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Is 1920x1080 okay for a thumbnail?</summary>
+        <div class="a">Yes, any 16:9 image at or above 640 pixels wide works and YouTube will scale it. There is no visual benefit over 1280x720 though, and larger files risk hitting the 2MB limit.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What size are YouTube Shorts thumbnails?</summary>
+        <div class="a">Shorts display vertical at 9:16 (1080 x 1920). On most surfaces Shorts show an auto-selected frame; custom Shorts thumbnails have limited support.</div>
+      </details>
+
+      <p class="hint">Related: <a href="/learn/how-to-download-youtube-thumbnail">How to download a YouTube thumbnail</a> &nbsp;&bull;&nbsp; <a href="/thumbnail-backgrounds">Free thumbnail backgrounds</a></p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>&copy; 2026 PlayMETRIC. Free tools for YouTube creators.</div>
+      <div>
+        <a href="/about">About</a> &nbsp;&bull;&nbsp;
+        <a href="/contact">Contact</a> &nbsp;&bull;&nbsp;
+        <a href="/privacy-policy">Privacy</a> &nbsp;&bull;&nbsp;
+        <a href="/terms">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "YouTube Thumbnail Size: The Only Guide You Need",
+        "description": "The correct YouTube thumbnail size is 1280x720 at 16:9 under 2MB, plus the five sizes YouTube stores and safe zones for text.",
+        "author": { "@type": "Organization", "name": "PlayMETRIC" },
+        "publisher": { "@type": "Organization", "name": "PlayMETRIC", "url": "https://playmetric.org" },
+        "datePublished": "2026-07-21",
+        "dateModified": "2026-07-21",
+        "mainEntityOfPage": "https://playmetric.org/learn/youtube-thumbnail-size-guide"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What is the best YouTube thumbnail size?", "acceptedAnswer": { "@type": "Answer", "text": "1280 x 720 pixels at a 16:9 aspect ratio, saved as JPG or PNG under 2MB." } },
+          { "@type": "Question", "name": "Is 1920x1080 okay for a YouTube thumbnail?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, any 16:9 image at least 640 pixels wide works, but there is no visual benefit over 1280x720 and larger files risk the 2MB limit." } },
+          { "@type": "Question", "name": "What sizes does YouTube store for each thumbnail?", "acceptedAnswer": { "@type": "Answer", "text": "Up to five: maxresdefault (1280x720), sddefault (640x480), hqdefault (480x360), mqdefault (320x180), and default (120x90)." } }
+        ]
+      }
+    ]
+  }
+  </script>
+</body>
+</html>

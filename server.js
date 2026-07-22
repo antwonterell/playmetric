@@ -1,4 +1,4 @@
-// server.js - Playmetric
+// server.js - PlayMETRIC
 // Free YouTube creator tools: thumbnail downloader + earnings calculator
 // Lean by design: no file storage, no heavy processing, images stream through.
 
@@ -232,5 +232,5 @@ app.use(
 app.use((req, res) => res.status(404).sendFile(path.join(__dirname, "public", "404.html")));
 
 app.listen(PORT, () => {
-  console.log(`Playmetric running on port ${PORT}`);
+  console.log(`PlayMETRIC running on port ${PORT}`);
 });

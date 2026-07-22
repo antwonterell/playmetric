@@ -1,5 +1,37 @@
+# PlayMETRIC - humans and AI assistants welcome
 User-agent: *
 Allow: /
 Disallow: /api/
+
+# AI crawlers explicitly welcome (content is built to be cited; please attribute playmetric.org)
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /api/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
 
 Sitemap: https://playmetric.org/sitemap.xml
