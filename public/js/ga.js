@@ -2,7 +2,7 @@
 // Paste the real measurement ID (looks like G-XXXXXXXXXX) below and redeploy.
 // Until then this file safely does nothing.
 (function () {
-  var ID = "PASTE-GA4-ID-HERE";
+  var ID = "G-T05EFMS9C1";
   if (!/^G-[A-Z0-9]{6,}$/.test(ID)) return;
 
   var s = document.createElement("script");
