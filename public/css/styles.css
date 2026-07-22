@@ -402,9 +402,66 @@ details.faq-item .a { padding: 0 18px 15px; color: var(--text-dim); }
 .mt-2 { margin-top: 20px; }
 .mt-3 { margin-top: 30px; }
 
+/* ===== Mobile nav (hamburger) ===== */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  flex-direction: column;
+  gap: 5px;
+}
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+@media (max-width: 760px) {
+  .nav-toggle { display: flex; }
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 62px;
+    left: 0;
+    right: 0;
+    background: var(--bg-soft);
+    border-bottom: 1px solid var(--card-edge);
+    flex-direction: column;
+    gap: 0;
+    padding: 6px 20px 14px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  }
+  .main-nav a {
+    padding: 13px 0;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--card-edge);
+    color: var(--text);
+  }
+  .main-nav a:last-child { border-bottom: none; }
+  .main-nav a.active { color: var(--snag); }
+  .site-header.nav-open .main-nav { display: flex; }
+  .site-header.nav-open .nav-toggle span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+  .site-header.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+  .site-header.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+}
+
+/* ===== Small-screen layout tuning ===== */
 @media (max-width: 640px) {
   .yt-result { flex-direction: column; }
   .yt-result .yt-thumb { max-width: 100%; width: 100%; }
-  .main-nav { gap: 14px; }
-  .main-nav a { font-size: 0.82rem; }
+  .wrap { padding: 0 16px; }
+  .hero { padding: 44px 0 28px; }
+  .panel { padding: 20px 16px; }
+  .section { padding: 26px 0; }
+  .yt-mock { padding: 16px; }
+  .tabs { gap: 6px; }
+  .tab-btn { padding: 8px 14px; font-size: 0.82rem; }
+  .btn { padding: 12px 18px; font-size: 0.95rem; }
+  .input-row .btn { flex: 1 1 auto; }
+  .thumb-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
 }

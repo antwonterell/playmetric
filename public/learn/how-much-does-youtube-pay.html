@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/styles.css?v=5" />
+  <link rel="stylesheet" href="/css/styles.css?v=6" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png" />
@@ -26,7 +26,8 @@
   <header class="site-header">
     <div class="wrap">
       <a href="/" class="logo">Play<span class="snag">METRIC</span></a>
-      <nav class="main-nav">
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="main-nav">
         <a href="/youtube-thumbnail-downloader">Thumbnail Downloader</a>
         <a href="/youtube-earnings-calculator">Earnings Calculator</a>
         <a href="/thumbnail-backgrounds">Backgrounds</a>
@@ -139,6 +140,7 @@
     ]
   }
   </script>
+  <script src="/js/nav.js" defer></script>
   <script src="/js/ga.js" defer></script>
 </body>
 </html>
