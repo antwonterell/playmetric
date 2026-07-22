@@ -17,6 +17,10 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+html { scroll-behavior: smooth; }
+::selection { background: var(--snag); color: #fff; }
+:focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; }
+
 body {
   background: var(--bg);
   color: var(--text);
@@ -127,7 +131,8 @@ input:focus, select:focus, textarea:focus { border-color: var(--snag); }
   transition: background 0.15s, transform 0.05s;
   white-space: nowrap;
 }
-.btn:hover { background: var(--snag-deep); }
+.btn:hover { background: var(--snag-deep); box-shadow: 0 6px 24px rgba(255, 90, 69, 0.35); }
+.btn.mint:hover { box-shadow: 0 6px 24px rgba(61, 220, 151, 0.3); }
 .btn:active { transform: scale(0.98); }
 .btn:disabled { opacity: 0.5; cursor: wait; }
 .btn.mint { background: var(--mint); color: #08130e; }
@@ -326,7 +331,7 @@ details.faq-item .a { padding: 0 18px 15px; color: var(--text-dim); }
   display: block;
   color: var(--text);
 }
-.tool-card:hover { border-color: var(--snag); transform: translateY(-3px); text-decoration: none; }
+.tool-card:hover { border-color: var(--snag); transform: translateY(-3px); text-decoration: none; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4); }
 .tool-card.mint:hover { border-color: var(--mint); }
 .tool-card .icon { font-size: 2rem; }
 .tool-card h3 { margin: 12px 0 6px; font-size: 1.2rem; }
@@ -363,7 +368,9 @@ details.faq-item .a { padding: 0 18px 15px; color: var(--text-dim); }
   color: var(--text);
   transition: border-color 0.15s, transform 0.15s;
 }
-.learn-card:hover { border-color: var(--snag); transform: translateY(-3px); text-decoration: none; }
+.learn-card:hover { border-color: var(--snag); transform: translateY(-3px); text-decoration: none; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4); }
+.bg-card { transition: border-color 0.15s, transform 0.15s; }
+.bg-card:hover { border-color: var(--snag); transform: translateY(-3px); }
 .learn-card .lc-body { padding: 20px; }
 .learn-card h3 { font-size: 1.08rem; margin-bottom: 6px; }
 .learn-card p { color: var(--text-dim); font-size: 0.88rem; }

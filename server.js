@@ -5,8 +5,10 @@
 const express = require("express");
 const path = require("path");
 const archiver = require("archiver");
+const compression = require("compression");
 
 const app = express();
+app.use(compression());
 const PORT = process.env.PORT || 3000;
 
 app.disable("x-powered-by");
@@ -28,8 +30,9 @@ app.use((req, res, next) => {
     "Content-Security-Policy",
     "default-src 'self'; img-src 'self' data: blob: https://i.ytimg.com; " +
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
-      "font-src 'self' https://fonts.gstatic.com; script-src 'self'; " +
-      "connect-src 'self'"
+      "font-src 'self' https://fonts.gstatic.com; " +
+      "script-src 'self' https://www.googletagmanager.com; " +
+      "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com"
   );
   next();
 });
