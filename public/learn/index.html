@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/styles.css?v=20260905a" />
+  <link rel="stylesheet" href="/css/styles.css?v=20260905b" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png" />
@@ -40,6 +40,10 @@
     <div class="wrap">
       <h1>Learn how YouTube <span class="accent">actually pays</span></h1>
       <p class="answer-first">PlayMETRIC Learn explains how YouTube pay and thumbnails work in 2026, using the same RPM and size data behind our free tools. Start with RPM by niche or how much YouTube pays if you care about money. Start with thumbnail size or download methods if you are building covers.</p>
+      <div class="convert-cta">
+        <a class="btn mint sm" href="/youtube-earnings-calculator">Estimate your earnings</a>
+        <a class="btn ghost sm" href="/youtube-thumbnail-downloader">Download a thumbnail</a>
+      </div>
     </div>
   </section>
 
@@ -76,6 +80,26 @@
           </div>
         </a>
       </div>
+
+      <h2 style="margin-top:42px">Frequently asked questions</h2>
+      <p class="learn-faq-intro">Short answers drawn from the same 2026 RPM and thumbnail facts used in our tools. No fluff.</p>
+      <details class="faq-item">
+        <summary>What is the difference between RPM and CPM?</summary>
+        <div class="a">CPM is what advertisers pay per 1,000 ad impressions. RPM is what a creator actually receives per 1,000 video views after YouTube's 45% cut and after views that showed no ad. RPM is always lower than CPM and is the number that matters for income.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How much do YouTube Shorts pay in 2026?</summary>
+        <div class="a">Shorts typically pay about $0.05 to $0.15 per 1,000 views, far less than long form. A million Shorts views often lands around $50 to $150. Creators usually treat Shorts as discovery that funnels viewers to higher-paying long form videos.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What size should a YouTube thumbnail be?</summary>
+        <div class="a">Upload 1280 x 720 pixels at 16:9, under 2MB, as JPG, PNG, static GIF, or WEBP. That is YouTube's recommended size and the HD file stored as maxresdefault.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Is it legal to download a YouTube thumbnail?</summary>
+        <div class="a">Downloading a publicly served thumbnail for personal reference, research, criticism, or archiving your own work is normal fair use territory. Reuploading someone else's thumbnail as your own video cover, selling it, or claiming the design as yours can violate copyright.</div>
+      </details>
+      <p class="hint" style="margin-top:18px">Try the tools: <a href="/youtube-earnings-calculator">Earnings calculator</a> &nbsp;&bull;&nbsp; <a href="/youtube-thumbnail-downloader">Thumbnail downloader</a></p>
     </div>
   </section>
 
@@ -94,10 +118,51 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "PlayMETRIC Learn",
-    "url": "https://playmetric.org/learn/",
-    "description": "Guides on YouTube RPM, pay rates, and thumbnails built on 2026 data."
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "name": "PlayMETRIC Learn",
+        "url": "https://playmetric.org/learn/",
+        "description": "Guides on YouTube RPM, pay rates, and thumbnails built on 2026 data."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the difference between RPM and CPM?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "CPM is what advertisers pay per 1,000 ad impressions. RPM is what a creator actually receives per 1,000 video views after YouTube's 45% cut and after views that showed no ad. RPM is always lower than CPM and is the number that matters for income."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much do YouTube Shorts pay in 2026?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Shorts typically pay about $0.05 to $0.15 per 1,000 views, far less than long form. A million Shorts views often lands around $50 to $150. Creators usually treat Shorts as discovery that funnels viewers to higher-paying long form videos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What size should a YouTube thumbnail be?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Upload 1280 x 720 pixels at 16:9, under 2MB, as JPG, PNG, static GIF, or WEBP. That is YouTube's recommended size and the HD file stored as maxresdefault."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it legal to download a YouTube thumbnail?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Downloading a publicly served thumbnail for personal reference, research, criticism, or archiving your own work is normal fair use territory. Reuploading someone else's thumbnail as your own video cover, selling it, or claiming the design as yours can violate copyright."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
   <script src="/js/nav.js" defer></script>

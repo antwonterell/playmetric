@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/styles.css?v=20260905a" />
+  <link rel="stylesheet" href="/css/styles.css?v=20260905b" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png" />
@@ -43,6 +43,10 @@
       <p class="byline">By <strong>PlayMETRIC Team</strong> &nbsp;&bull;&nbsp; Published July 21, 2026 &nbsp;&bull;&nbsp; Updated September 5, 2026</p>
 
       <p class="answer-first">The correct YouTube thumbnail upload size is 1280 x 720 pixels at 16:9, under 2MB, as JPG, PNG, static GIF, or WEBP. YouTube then stores up to five smaller versions for different surfaces. Design for 168 to 360 pixels wide, because that is how most viewers actually see it.</p>
+      <div class="convert-cta">
+        <a class="btn mint sm" href="/youtube-thumbnail-downloader">Download a thumbnail in HD</a>
+        <a class="btn ghost sm" href="/thumbnail-backgrounds">Browse free backgrounds</a>
+      </div>
 
       <div class="tldr">
         <div class="t">TL;DR</div>
@@ -104,8 +108,16 @@
         <div class="a">Yes, any 16:9 image at or above 640 pixels wide works and YouTube will scale it. There is no visual benefit over 1280x720 though, and larger files risk hitting the 2MB limit.</div>
       </details>
       <details class="faq-item">
+        <summary>What sizes does YouTube store for each thumbnail?</summary>
+        <div class="a">Up to five: maxresdefault (1280x720), sddefault (640x480), hqdefault (480x360), mqdefault (320x180), and default (120x90). Maxresdefault only exists when the source upload was HD.</div>
+      </details>
+      <details class="faq-item">
         <summary>What size are YouTube Shorts thumbnails?</summary>
         <div class="a">Shorts display vertical at 9:16 (1080 x 1920). On most surfaces Shorts show an auto-selected frame; custom Shorts thumbnails have limited support.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Why design for 168 pixels if I upload 1280x720?</summary>
+        <div class="a">Most viewers see thumbnails at about 168 to 360 pixels wide in search, sidebar, and mobile lists. Upload HD for sharpness, but keep text and faces readable at the small display size.</div>
       </details>
 
       <p class="hint">Related: <a href="/learn/how-to-download-youtube-thumbnail">How to download a YouTube thumbnail</a> &nbsp;&bull;&nbsp; <a href="/thumbnail-backgrounds">Free thumbnail backgrounds</a></p>
@@ -141,9 +153,11 @@
       {
         "@type": "FAQPage",
         "mainEntity": [
-          { "@type": "Question", "name": "What is the best YouTube thumbnail size?", "acceptedAnswer": { "@type": "Answer", "text": "1280 x 720 pixels at a 16:9 aspect ratio, saved as JPG or PNG under 2MB." } },
-          { "@type": "Question", "name": "Is 1920x1080 okay for a YouTube thumbnail?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, any 16:9 image at least 640 pixels wide works, but there is no visual benefit over 1280x720 and larger files risk the 2MB limit." } },
-          { "@type": "Question", "name": "What sizes does YouTube store for each thumbnail?", "acceptedAnswer": { "@type": "Answer", "text": "Up to five: maxresdefault (1280x720), sddefault (640x480), hqdefault (480x360), mqdefault (320x180), and default (120x90)." } }
+          { "@type": "Question", "name": "What is the best YouTube thumbnail size?", "acceptedAnswer": { "@type": "Answer", "text": "1280 x 720 pixels at 16:9, saved as JPG or PNG under 2MB. This is both YouTube's recommendation and the size stored as maxresdefault." } },
+          { "@type": "Question", "name": "Is 1920x1080 okay for a thumbnail?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, any 16:9 image at or above 640 pixels wide works and YouTube will scale it. There is no visual benefit over 1280x720 though, and larger files risk hitting the 2MB limit." } },
+          { "@type": "Question", "name": "What sizes does YouTube store for each thumbnail?", "acceptedAnswer": { "@type": "Answer", "text": "Up to five: maxresdefault (1280x720), sddefault (640x480), hqdefault (480x360), mqdefault (320x180), and default (120x90). Maxresdefault only exists when the source upload was HD." } },
+          { "@type": "Question", "name": "What size are YouTube Shorts thumbnails?", "acceptedAnswer": { "@type": "Answer", "text": "Shorts display vertical at 9:16 (1080 x 1920). On most surfaces Shorts show an auto-selected frame; custom Shorts thumbnails have limited support." } },
+          { "@type": "Question", "name": "Why design for 168 pixels if I upload 1280x720?", "acceptedAnswer": { "@type": "Answer", "text": "Most viewers see thumbnails at about 168 to 360 pixels wide in search, sidebar, and mobile lists. Upload HD for sharpness, but keep text and faces readable at the small display size." } }
         ]
       }
     ]

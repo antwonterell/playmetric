@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/styles.css?v=20260905a" />
+  <link rel="stylesheet" href="/css/styles.css?v=20260905b" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png" />
@@ -43,6 +43,10 @@
       <p class="byline">By <strong>PlayMETRIC Team</strong> &nbsp;&bull;&nbsp; Published July 21, 2026 &nbsp;&bull;&nbsp; Updated September 5, 2026</p>
 
       <p class="answer-first">The fastest way to download a YouTube thumbnail is to paste the video link into a free downloader and pick a size up to 1280x720 HD. You can also build the direct URL with the video ID: https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg. Batch mode packs up to 20 thumbnails into one ZIP.</p>
+      <div class="convert-cta">
+        <a class="btn mint sm" href="/youtube-thumbnail-downloader">Open the thumbnail downloader</a>
+        <a class="btn ghost sm" href="/learn/youtube-thumbnail-size-guide">Thumbnail size guide</a>
+      </div>
 
       <div class="tldr">
         <div class="t">TL;DR</div>
@@ -78,6 +82,14 @@
       </ul>
 
       <h2>Frequently asked questions</h2>
+      <details class="faq-item">
+        <summary>What is the direct URL for a YouTube thumbnail?</summary>
+        <div class="a">Use https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg for HD, or hqdefault.jpg for the 480x360 version that exists for nearly every video. Replace VIDEO_ID with the 11-character ID from the watch URL.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Is it legal to download YouTube thumbnails?</summary>
+        <div class="a">Downloading for reference, research, criticism, or archiving your own content is generally fair use. Reuploading someone else's thumbnail as your own cover, selling it, or claiming the work as yours can violate copyright.</div>
+      </details>
       <details class="faq-item">
         <summary>Can I download a thumbnail on my phone?</summary>
         <div class="a">Yes. The PlayMETRIC downloader is built mobile first: paste the link, tap Download, and the JPG saves to your device.</div>
@@ -124,8 +136,11 @@
       {
         "@type": "FAQPage",
         "mainEntity": [
-          { "@type": "Question", "name": "What is the direct URL for a YouTube thumbnail?", "acceptedAnswer": { "@type": "Answer", "text": "https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg for HD, or hqdefault.jpg for the 480x360 version that exists for nearly every video." } },
-          { "@type": "Question", "name": "Is it legal to download YouTube thumbnails?", "acceptedAnswer": { "@type": "Answer", "text": "Downloading for reference, research, or archiving is generally fair use. Reuploading someone else's thumbnail as your own content may violate copyright." } }
+          { "@type": "Question", "name": "What is the direct URL for a YouTube thumbnail?", "acceptedAnswer": { "@type": "Answer", "text": "Use https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg for HD, or hqdefault.jpg for the 480x360 version that exists for nearly every video. Replace VIDEO_ID with the 11-character ID from the watch URL." } },
+          { "@type": "Question", "name": "Is it legal to download YouTube thumbnails?", "acceptedAnswer": { "@type": "Answer", "text": "Downloading for reference, research, criticism, or archiving your own content is generally fair use. Reuploading someone else's thumbnail as your own cover, selling it, or claiming the work as yours can violate copyright." } },
+          { "@type": "Question", "name": "Can I download a thumbnail on my phone?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The PlayMETRIC downloader is built mobile first: paste the link, tap Download, and the JPG saves to your device." } },
+          { "@type": "Question", "name": "Why does maxresdefault.jpg show a gray placeholder for some videos?", "acceptedAnswer": { "@type": "Answer", "text": "YouTube only generates the 1280x720 file for HD uploads. For older or low resolution videos, use hqdefault.jpg (480x360), which exists for nearly every video." } },
+          { "@type": "Question", "name": "Can I get the thumbnail of a deleted or private video?", "acceptedAnswer": { "@type": "Answer", "text": "Usually not. Private and deleted videos stop serving thumbnails from YouTube's servers in most cases." } }
         ]
       }
     ]

@@ -356,6 +356,16 @@ details.faq-item summary::after { content: "+"; float: right; color: var(--snag)
 details.faq-item[open] summary::after { content: "-"; }
 details.faq-item .a { padding: 0 18px 15px; color: var(--text-dim); }
 
+.convert-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 8px;
+}
+.convert-cta .btn { text-decoration: none; }
+.learn-faq-intro { color: var(--text-dim); margin: 8px 0 16px; }
+
+
 /* ===== Tool cards (homepage) ===== */
 .tool-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 26px; }
 .tool-card {
