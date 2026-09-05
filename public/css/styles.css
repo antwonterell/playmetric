@@ -96,6 +96,19 @@ img { max-width: 100%; display: block; }
 }
 .hero h1 .accent { color: var(--snag); }
 .hero h1 .accent-mint { color: var(--mint); }
+.answer-first {
+  color: var(--text);
+  font-size: 1.02rem;
+  line-height: 1.55;
+  max-width: 680px;
+  margin: 14px auto 0;
+}
+.hero .answer-first { color: var(--text); }
+.content-block > .answer-first {
+  margin: 14px 0 16px;
+  color: var(--text);
+  font-size: 1.05rem;
+}
 .hero p.sub {
   color: var(--text-dim);
   max-width: 640px;
