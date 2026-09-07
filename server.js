@@ -242,6 +242,12 @@ app.use((req, res, next) => {
   next();
 });
 
+
+// Learn hub: directory index (static extensions look for learn.html, which does not exist)
+app.get("/learn", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "learn", "index.html"));
+});
+
 // ============================================
 // STATIC SITE + HEALTH
 // ============================================
