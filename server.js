@@ -218,6 +218,31 @@ app.post("/api/batch", async (req, res) => {
 });
 
 // ============================================
+// CANONICAL PAGE URLS (SEO)
+// One 200 per sitemap path. .html twins and trailing
+// slashes 301 so Google does not split indexing.
+// ============================================
+app.use((req, res, next) => {
+  if (req.method !== "GET" && req.method !== "HEAD") return next();
+  const raw = req.originalUrl || req.url || "/";
+  const qIndex = raw.indexOf("?");
+  const pathname = (qIndex === -1 ? raw : raw.slice(0, qIndex)).split("#")[0];
+  const qs = qIndex === -1 ? "" : raw.slice(qIndex);
+  if (pathname.startsWith("/api/")) return next();
+
+  if (pathname === "/index.html" || pathname === "/index") {
+    return res.redirect(301, "/" + (qs.startsWith("?") ? qs.slice(1) === "" ? "" : qs : qs));
+  }
+  if (pathname.length > 1 && pathname.endsWith(".html")) {
+    return res.redirect(301, pathname.slice(0, -5) + qs);
+  }
+  if (pathname.length > 1 && pathname.endsWith("/")) {
+    return res.redirect(301, pathname.replace(/\/+$/, "") + qs);
+  }
+  next();
+});
+
+// ============================================
 // STATIC SITE + HEALTH
 // ============================================
 app.get("/healthz", (req, res) => res.json({ status: "ok" }));
@@ -225,6 +250,7 @@ app.get("/healthz", (req, res) => res.json({ status: "ok" }));
 app.use(
   express.static(path.join(__dirname, "public"), {
     extensions: ["html"],
+    redirect: false,
     maxAge: "1h",
     setHeaders(res, filePath) {
       if (filePath.endsWith(".html")) res.setHeader("Cache-Control", "no-cache");
