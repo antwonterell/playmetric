@@ -26,6 +26,11 @@ app.use((req, res, next) => {
   res.setHeader("X-Frame-Options", "DENY");
   res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
   res.setHeader("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
+  // Keep sitemap/robots/llms free of HTML CSP so Google Search Console can fetch them cleanly.
+  const p = (req.path || "").toLowerCase();
+  if (p === "/sitemap.xml" || p === "/robots.txt" || p === "/llms.txt") {
+    return next();
+  }
   res.setHeader(
     "Content-Security-Policy",
     "default-src 'self'; img-src 'self' data: blob: https://i.ytimg.com; " +
