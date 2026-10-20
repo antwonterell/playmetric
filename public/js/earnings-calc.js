@@ -1,5 +1,5 @@
 // Playmetric - YouTube earnings calculator
-// RPM ranges are 2026 published figures for a US audience; geo multipliers scale them.
+// Illustrative rate assumptions, not verified market data. Country multipliers apply to long-form views.
 (function () {
   "use strict";
 
@@ -32,7 +32,7 @@
     { id: "in", label: "India", mult: 0.1 },
   ];
 
-  const SHORTS_RPM = 0.1; // typical $0.05 to $0.15 per 1,000 Shorts views
+  const SHORTS_RPM = 0.1; // assumed midpoint; range $0.05 to $0.15 per 1,000 Shorts engaged views
 
   const nicheSel = document.getElementById("niche");
   const geoSel = document.getElementById("geo");
@@ -137,7 +137,7 @@
     ctx.fillText("Playmetric", 70, 100);
     ctx.fillStyle = "#9aa3b5";
     ctx.font = "600 26px Inter, sans-serif";
-    ctx.fillText("YouTube Earnings Estimate", 70, 145);
+    ctx.fillText("Illustrative YouTube Revenue", 70, 145);
 
     ctx.fillStyle = "#3ddc97";
     ctx.font = "800 110px Inter, sans-serif";
@@ -146,18 +146,18 @@
     ctx.fillStyle = "#eef1f7";
     ctx.font = "600 30px Inter, sans-serif";
     ctx.fillText(
-      r.views.toLocaleString("en-US") + " monthly views • " + r.niche.label,
+      r.views.toLocaleString("en-US") + " input views • " + r.niche.label,
       70,
       370
     );
     ctx.fillStyle = "#9aa3b5";
     ctx.fillText(
-      "Audience: " + r.geo.label + " • RPM " + fmt(r.blendedRpm),
+      "Audience: " + r.geo.label + " • assumed rate " + fmt(r.blendedRpm),
       70,
       415
     );
     ctx.fillText(
-      "Range: " + fmt(r.low) + " to " + fmt(r.high) + " per month",
+      "Scenario range: " + fmt(r.low) + " to " + fmt(r.high) + " per month",
       70,
       460
     );

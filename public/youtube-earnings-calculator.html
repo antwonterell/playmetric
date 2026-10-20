@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YouTube Earnings Calculator 2026 - Real RPM by Niche | PlayMETRIC</title>
-  <meta name="description" content="Estimate how much a YouTube channel earns using real 2026 RPM data by niche and audience country. Finance channels earn 10x more than gaming per view. See low, typical, and high estimates instantly." />
+  <title>YouTube Earnings Calculator - Illustrative Scenarios | PlayMETRIC</title>
+  <meta name="description" content="Explore illustrative YouTube revenue scenarios by niche and audience country. Rates are assumptions, not verified earnings data or a forecast." />
   <link rel="canonical" href="https://playmetric.org/youtube-earnings-calculator" />
-  <meta property="og:title" content="YouTube Earnings Calculator 2026 - Real RPM by Niche | PlayMETRIC" />
-  <meta property="og:description" content="How much does YouTube actually pay? Estimate earnings with real RPM data by niche and country, not a generic slider." />
+  <meta property="og:title" content="YouTube Earnings Calculator - Illustrative Scenarios | PlayMETRIC" />
+  <meta property="og:description" content="Explore revenue scenarios with transparent rate assumptions by niche and country. Actual channel earnings vary." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://playmetric.org/youtube-earnings-calculator" />
   <meta property="og:image" content="https://playmetric.org/img/og-brand.png" />
@@ -39,7 +39,7 @@
   <section class="hero">
     <div class="wrap">
       <h1>YouTube <span class="accent-mint">Earnings</span> Calculator</h1>
-      <p class="answer-first">In 2026, most monetized YouTube channels earn about $0.50 to $6 per 1,000 long form views after YouTube's cut. High value niches like finance can reach $10 to $30 with a US audience, while Shorts usually pay $0.05 to $0.15. Enter your monthly views, niche, and audience country below for a low, typical, and high estimate.</p>
+      <p class="answer-first">Explore a revenue scenario using assumed rates, not verified 2026 market data. Enter all long-form video views plus Shorts engaged views for the month, then select the share attributable to Shorts engaged views. Results depend on these assumptions and are not an earnings forecast.</p>
     </div>
   </section>
 
@@ -48,11 +48,11 @@
       <div class="calc-layout">
         <div class="panel">
           <div class="field">
-            <label for="views">Monthly views</label>
+            <label for="views">Monthly video views + Shorts engaged views</label>
             <input type="number" id="views" value="100000" min="0" step="1000" />
           </div>
           <div class="field">
-            <label for="niche">Channel niche <span class="sub-label">(biggest factor in pay)</span></label>
+            <label for="niche">Channel niche <span class="sub-label">(scenario assumption)</span></label>
             <select id="niche"></select>
           </div>
           <div class="field">
@@ -60,7 +60,7 @@
             <select id="geo"></select>
           </div>
           <div class="field">
-            <label for="shorts-pct">How much of your views are Shorts <span class="sub-label">(Shorts pay far less per view)</span></label>
+            <label for="shorts-pct">Share of the input that is Shorts engaged views</label>
             <select id="shorts-pct">
               <option value="0">None, all long form</option>
               <option value="25">About a quarter</option>
@@ -74,22 +74,22 @@
 
         <div class="panel">
           <div class="field">
-            <label>Estimated monthly ad revenue</label>
+            <label>Illustrative monthly YouTube revenue</label>
             <div class="result-big" id="monthly-mid">$0</div>
             <div class="result-range" id="monthly-range">low $0 to high $0</div>
           </div>
           <div class="result-row"><span class="k">Per year</span><span class="v" id="yearly">$0</span></div>
-          <div class="result-row"><span class="k">Per 1,000 views (RPM)</span><span class="v" id="rpm">$0</span></div>
+          <div class="result-row"><span class="k">Blended rate per 1,000 input views</span><span class="v" id="rpm">$0</span></div>
           <div class="result-row"><span class="k">Per view</span><span class="v" id="per-view">$0</span></div>
           <div class="result-row"><span class="k">Views needed for $1,000/mo</span><span class="v" id="views-1k">-</span></div>
           <button class="btn ghost mt-2" id="share-btn" style="width:100%">Download shareable result card</button>
-          <p class="hint">Ad revenue only. Sponsorships, affiliates, and memberships usually add 2x to 5x on top for established channels.</p>
+          <p class="hint">Scenario assumptions only, not measured channel earnings. YouTube RPM can include ads, Premium, memberships and fan funding. Sponsorships, affiliate sales and merchandise are not estimated here.</p>
         </div>
       </div>
 
       <div class="panel mt-2">
-        <h2>Same views, every niche <span class="badge">nobody else shows this</span></h2>
-        <p class="hint">What your exact views would earn in every niche. This is why "how much does YouTube pay" has no single answer.</p>
+        <h2>Same inputs, different niche assumptions</h2>
+        <p class="hint">Compare the same inputs using each illustrative niche rate. These results are not predictions of what a channel will earn.</p>
         <div id="compare-list" class="mt-2"></div>
       </div>
     </div>
@@ -98,10 +98,9 @@
   <section class="section">
     <div class="wrap content-block">
       <h2>How this calculator works</h2>
-      <p>YouTube pays creators through RPM: revenue per 1,000 monetized views, after YouTube takes its 45% share. In 2026, most monetized channels land between $0.50 and $6 RPM overall, but the spread by niche is enormous. Finance, investing, and business content regularly hits $10 to $30 per 1,000 US views because insurance, banking, and investment advertisers pay the most for those viewers. Entertainment, gaming, and music sit at the bottom because advertisers bid less.</p>
-      <p>Audience geography matters almost as much. A view from the US, UK, Canada, or Australia can be worth 5 to 10 times a view from lower income ad markets. That is why this calculator asks where your audience is instead of pretending every view pays the same.</p>
-
-      <h2>Typical 2026 RPM by niche (US audience)</h2>
+      <p>RPM is revenue after YouTube's share per 1,000 views. For videos, it includes all views, not only monetized playbacks; for Shorts, it uses engaged views. RPM can include ads, YouTube Premium, memberships and fan funding. See <a href="https://support.google.com/youtube/answer/9314357">YouTube's RPM definition</a>.</p>
+      <p>This tool multiplies long-form views by an assumed niche rate and country multiplier, then adds Shorts engaged views at assumed rates of $0.05, $0.10 and $0.15 per 1,000 for the low, midpoint and high scenarios. Country multipliers apply only to long-form views. The niche rates and multipliers are illustrative inputs with no verified dataset supplied. The midpoint is an arithmetic average, not a typical or expected outcome. Annual results assume the same monthly inputs for 12 months. No additional platform-share deduction is applied.</p>
+      <h2>Illustrative long-form rate assumptions (US baseline)</h2>
       <ul>
         <li>Finance and investing: $10 to $30</li>
         <li>Real estate: $8 to $20</li>
@@ -120,20 +119,20 @@
 
       <h2>Frequently asked questions</h2>
       <details class="faq-item">
-        <summary>How much does YouTube pay per 1,000 views in 2026?</summary>
-        <div class="a">For most monetized channels, between $0.50 and $6 per 1,000 views after YouTube's cut. High value niches like finance and investing can reach $10 to $30 per 1,000 views with a US audience, while music and entertainment can fall under $2.</div>
+        <summary>Is there a fixed YouTube rate per 1,000 views?</summary>
+        <div class="a">No. Actual RPM varies by channel and revenue mix. This calculator uses illustrative assumptions; use your own YouTube Analytics to assess actual performance.</div>
       </details>
       <details class="faq-item">
         <summary>How many views do I need to make $1,000 a month?</summary>
-        <div class="a">It depends entirely on your niche. A finance channel at $18 RPM needs about 56,000 monthly views. A gaming channel at $2.75 RPM needs about 364,000. Use the calculator above with your own niche to get your number.</div>
+        <div class="a">For long-form video, divide $1,000 by your assumed RPM and multiply by 1,000. At an illustrative $20 RPM, that is 50,000 views; at $2.75, round up to 363,637 views. These examples are arithmetic, not income promises.</div>
       </details>
       <details class="faq-item">
         <summary>Do YouTube Shorts pay less than regular videos?</summary>
-        <div class="a">Yes, dramatically. Shorts RPM is typically $0.05 to $0.15 per 1,000 views, roughly 20 to 50 times lower than long form in the same niche. Shorts are great for growth, but long form is where the ad money is.</div>
+        <div class="a">This model assumes lower Shorts rates, but does not establish a universal payout ratio. Shorts RPM uses engaged views. Enter that metric from YouTube Analytics rather than total Shorts starts or replays.</div>
       </details>
       <details class="faq-item">
         <summary>Is this estimate exact?</summary>
-        <div class="a">No calculator can be exact because YouTube pays based on your specific advertisers, seasonality, and watch time. This tool gives you a realistic range built from published 2026 RPM data by niche and geography, which is much closer than a one-size-fits-all slider.</div>
+        <div class="a">No. The rates are illustrative assumptions without a documented source dataset. The range is a scenario range, not a statistical confidence interval, and actual earnings may fall outside it.</div>
       </details>
       <details class="faq-item">
         <summary>Does YouTube pay monthly?</summary>
@@ -156,42 +155,55 @@
   </footer>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebApplication",
-        "name": "PlayMETRIC YouTube Earnings Calculator",
-        "url": "https://playmetric.org/youtube-earnings-calculator",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "Any",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "description": "Estimate YouTube channel earnings using 2026 RPM data by niche and audience country, with low, typical, and high ranges."
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "PlayMETRIC YouTube Earnings Calculator",
+      "url": "https://playmetric.org/youtube-earnings-calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How much does YouTube pay per 1,000 views in 2026?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Most monetized channels earn between $0.50 and $6 per 1,000 views after YouTube's cut. Finance and investing channels can reach $10 to $30 per 1,000 US views." }
-          },
-          {
-            "@type": "Question",
-            "name": "How many views do I need to make $1,000 a month on YouTube?",
-            "acceptedAnswer": { "@type": "Answer", "text": "A finance channel at $18 RPM needs about 56,000 monthly views. A gaming channel at $2.75 RPM needs about 364,000 monthly views." }
-          },
-          {
-            "@type": "Question",
-            "name": "Do YouTube Shorts pay less than regular videos?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Shorts RPM is typically $0.05 to $0.15 per 1,000 views, roughly 20 to 50 times lower than long form video in the same niche." }
+      "description": "Explore illustrative YouTube revenue scenarios using assumed rates by niche and country. These are not verified market data or guaranteed earnings."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is there a fixed YouTube rate per 1,000 views?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Actual RPM varies by channel and revenue mix. This calculator uses illustrative assumptions; use your own YouTube Analytics to assess actual performance."
           }
-        ]
-      }
-    ]
-  }
-  </script>
-  <script src="/js/earnings-calc.js?v=20260905b"></script>
+        },
+        {
+          "@type": "Question",
+          "name": "How many views do I need to make $1,000 a month on YouTube?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For long-form video, divide $1,000 by your assumed RPM and multiply by 1,000. At an illustrative $20 RPM, that is 50,000 views; at $2.75, round up to 363,637 views. These examples are arithmetic, not income promises."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do YouTube Shorts pay less than regular videos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This model assumes lower Shorts rates, but does not establish a universal payout ratio. Shorts RPM uses engaged views. Enter that metric from YouTube Analytics rather than total Shorts starts or replays."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+  <script src="/js/earnings-calc.js?v=20261019"></script>
   <script src="/js/nav.js" defer></script>
   <script src="/js/ga.js" defer></script>
 </body>
